@@ -18,6 +18,7 @@ func run(ctx context.Context) error {
 		host = flag.String("host", "localhost", "server host")
 		port = flag.Uint64("port", 25565, "server port")
 	)
+	flag.Parse()
 
 	slog.Info("parameters", slog.String("host", *host), slog.Uint64("port", *port))
 
